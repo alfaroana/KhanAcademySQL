@@ -1,0 +1,39 @@
+//**Project: Design a store database
+Create your own store! Your store should sell one type of things, like clothing or bikes, whatever you want your store to specialize in. 
+You should have a table for all the items in your store, and at least 5 columns for the kind of data you think you'd need to store. 
+You should sell at least 15 items, and use select statements to order your items by price and show at least one statistic about the items.**//
+
+CREATE TABLE Plushies (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, size INTEGER, aisle INTEGER);
+
+INSERT INTO Plushies VALUES (1, "Panda", 14.99, 9, 1);
+INSERT INTO Plushies VALUES (2, "Giraffe", 13.99, 8, 1);
+INSERT INTO Plushies VALUES (3, "Lion", 14.50, 8, 1);
+INSERT INTO Plushies VALUES (4, "Monkey", 11.99, 6, 1);
+INSERT INTO Plushies VALUES (5, "Elephant", 13.50, 7,1); 
+INSERT INTO Plushies VALUES (6, "Shark", 9.99, 5, 2);
+INSERT INTO Plushies VALUES (7, "Goldfish", 9.50, 6,2);
+INSERT INTO Plushies VALUES (8, "Dolphin", 10.50, 7, 2);
+INSERT INTO Plushies VALUES (9, "Eel", 9.99, 8, 2);
+INSERT INTO Plushies VALUES (10, "Pufferfish", 9.50, 7, 2);
+INSERT INTO Plushies VALUES (11, "Dog", 13.99, 9, 3);
+INSERT INTO Plushies VALUES (12, "Cat", 13.99, 9, 3);
+INSERT INTO Plushies VALUES (13, "Rabbit", 12.99, 8, 3);
+INSERT INTO Plushies VALUES (14, "Hamster", 8.50, 6, 3);
+INSERT INTO Plushies VALUES (15, "Iguana", 9.99, 7, 3);
+INSERT INTO Plushies VALUES (16, "Toucan", 11.99, 8, 4);
+INSERT INTO Plushies VALUES (17, "Hummingbird", 8.99, 6, 4);
+INSERT INTO Plushies VALUES (18, "Eagle", 10.50, 8,4);
+INSERT INTO Plushies VALUES (19, "Crow", 11.50, 8, 4);
+INSERT INTO Plushies VALUES (20, "Dove", 12.99, 9, 4);
+
+//**All plushies in store: what type of animal, the price, the size of plusie in inches, and what aisle of the store it can be found in**//
+SELECT * FROM Plushies; 
+
+//**All plushies, ordered by price**//
+SELECT * FROM Plushies ORDER BY price;
+
+//**Total price if you were to buy one of each kind of animal plushies**//
+SELECT SUM(price) FROM Plushies;
+
+
+//**END of project 1**//
