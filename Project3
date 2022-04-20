@@ -1,0 +1,40 @@
+//**Project: App Impersonator
+Think about your favorite apps, and pick one that stores your data- like a game that stores scores, an app that lets you post updates, etc. Now in this project, you're going to imagine that the app stores your data in a SQL database (which is pretty likely!), and write SQL statements that might look like their own SQL.
+
+CREATE a table to store the data.
+INSERT a few example rows in the table.
+Use an UPDATE to emulate what happens when you edit data in the app.
+Use a DELETE to emulate what happens when you delete data in the app.**//
+
+
+/* What does the app's SQL look like? */
+
+CREATE TABLE twitter (id INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT, location TEXT, date TEXT, tweet TEXT);
+
+INSERT INTO twitter (username, location, date, tweet) VALUES ("bobbyhill12", "USA", "11-11-2020", "Hey everyone!"); 
+INSERT INTO twitter (username, location, date, tweet) VALUES ("Spongebob1999", "Bikini Bottom", "11-12-2020", "I'm Ready!");
+INSERT INTO twitter (username, location, date, tweet) VALUES ("FinnAndJake20", "Land of ooo", "11-15-2020", "MATHEMATICAL!");
+INSERT INTO twitter (username, location, date, tweet) VALUES ("PanPanChan", "USA", "12-12-2020", "Listening to Kpop!");
+INSERT INTO twitter (username, location, date, tweet) VALUES ("PatrickStar1999", "Bikini Bottom", "12-20-2020", "Who ate my chocolate?!?!");
+INSERT INTO twitter (username, location, date, tweet) VALUES ("bobbyhill12", "USA", "01-11-2021", "Good thing winter is not that cold in texas!"); 
+INSERT INTO twitter (username, location, date, tweet) VALUES ("Spongebob1999", "Bikini Bottom", "01-13-2021", "Nervous about my driver's license test today.");
+INSERT INTO twitter (username, location, date, tweet) VALUES ("FinnAndJake20", "Land of ooo", "01-15-2021", "Its adventuretime!!!");
+INSERT INTO twitter (username, location, date, tweet) VALUES ("PanPanChan", "USA", "02-10-2021", "Japan is sooo cool!");
+INSERT INTO twitter (username, location, date, tweet) VALUES ("PatrickStar1999", "Bikini Bottom", "02-20-2021", "I can't wait until spongebob gets home from work.");
+
+SELECT * FROM twitter;
+
+/*PanPan is moving from San Fransisco to Japan so he changes his location and twitter updates all tweets from his account to reflect his new location*/
+
+UPDATE twitter SET location ="Japan" WHERE username="PanPanChan";
+
+SELECT * FROM twitter;
+
+/*Patrick Star realized he ate his own chocolate, after feeling embarassed for acting out, he decides to delete his tweet */
+
+DELETE FROM twitter WHERE id = "5";
+
+SELECT * FROM twitter;
+
+
+//**END of Project 3**//
